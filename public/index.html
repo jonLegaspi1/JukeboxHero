@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
+    div.center {
+    text-align: center;
+    }
       #login, #loggedin {
         display: none;
       }
@@ -18,25 +21,26 @@
   </head>
 
   <body>
-    <div class="container">
-      <div id="login">
-        <h1>DJ Spotify</h1>
-        <a href="/login" class="btn btn-primary">Log in </a>
-      </div>
-      <div id="loggedin">
-        <div id="user-profile">
-        </div>
-        <div id="oauth">
-        </div>
-        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
-      </div>
-    </div>
+  <div class="center">
+  <h1>Jukebox Hero</h1>
+  
     <div class="container">
         <form>
-            <input type="button" class="button" value="I want to be a user!" 
-            onclick="window.location.href='http://localhost:8080/token.html'">
+            <input type="button" class="button" value="I am the DJ!" 
+            onclick="window.location.href='http://127.0.0.1:8080/public/djlogin.html'">
         </form>
     </div>
+    
+    <p> </p>
+    
+    <div class="container">
+        <form>
+            <input type="button" class="button" value="I am a user!" 
+            onclick="window.location.href='http://127.0.0.1:8080/public/token.html'">
+        </form>
+    </div>
+    </div>
+    
     <script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
       <div class="media">
