@@ -3,12 +3,17 @@
   <head>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <style type="text/css">
+    div.center {
+    text-align: center;
+    }
+    </style>
         <script>
           function myFunction() {
           var x, text;
           x = document.getElementById("token").value;
           if (x == "123Cheese"){
-            location.replace("http://localhost:8080/playlist.html"); 
+            location.replace("http://127.0.0.1:8080/public/playlist.html"); 
             text = "";
           }
           else{
@@ -19,12 +24,16 @@
   </script>
   </head>
 <body>
+<div class="center">
+<div class="class">
   <h1>Type in a valid access token</h1>
   <div>
     <input id="token">
     <button type="button" onclick="myFunction()">Submit</button>
     <p id ="demo"></p>
     
+  </div>
+  </div>
   </div>
 </body>
 
